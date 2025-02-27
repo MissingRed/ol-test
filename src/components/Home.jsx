@@ -9,7 +9,7 @@ import {
   Navbar,
   Nav,
 } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
@@ -223,13 +223,14 @@ const Home = () => {
       </h1>
 
       <Container className="d-flex gap-2 justify-content-end">
-        <Button
+        <Link
+          to="/crear"
           className="btn btn-secondary"
           variant="danger"
           onClick={() => setShow(true)}
         >
           Crear Formulario nuevo
-        </Button>
+        </Link>
         <Button variant="outline-danger" className="btn btn-secondary">
           Descargar Reporte en CSV
         </Button>
